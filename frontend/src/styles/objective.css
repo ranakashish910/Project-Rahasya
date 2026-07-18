@@ -1,0 +1,154 @@
+
+
+.top-hud{
+
+    position:absolute;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:78%;
+
+    height:62px;
+
+    padding:0 25px;
+
+    background:rgba(8,8,8,.78);
+
+    border:2px solid #5b0000;
+
+    border-radius:8px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    backdrop-filter:blur(4px);
+
+    box-shadow:
+        inset 0 0 10px #000,
+        0 0 14px rgba(120,0,0,.45);
+
+    z-index:100;
+}
+
+
+.hud-objective{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#d9d9d9;
+
+    font-size:16px;
+
+    width:45%;
+}
+
+.hud-objective svg{
+
+    color:#d62c2c;
+
+    font-size:22px;
+}
+
+
+.hud-timer{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:32px;
+
+    color:white;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+
+.hud-timer svg{
+
+    color:#ff3c3c;
+
+    font-size:28px;
+}
+
+/* Inventory */
+
+.hud-inventory{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    width:20%;
+
+    color:#d9d9d9;
+
+    font-size:18px;
+}
+
+.hud-inventory svg{
+
+    color:#ffb347;
+
+    font-size:22px;
+}
+
+/* Hover */
+
+.top-hud:hover{
+
+    border-color:#920000;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.top-hud{
+
+width:95%;
+
+height:auto;
+
+padding:15px;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.hud-objective,
+.hud-inventory{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.hud-timer{
+
+font-size:24px;
+
+}
+
+}

@@ -1,0 +1,15 @@
+.popup-btn {
+  margin-top: 15px;
+  background: #6b0000;  
+  color: #fff;
+  border: 1px solid #9b0000;
+}
+
+.popup-btn:hover {
+  background: #850000;
+  border-color: #c40000;
+}
+
+.popup-btn:active {
+  background: #500000;
+}

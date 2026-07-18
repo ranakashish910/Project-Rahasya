@@ -1,0 +1,72 @@
+.loadingContainer {
+    width: 100%;
+    min-height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.loadingContainer h1 {
+    font-size: 68px;
+    letter-spacing: 12px;
+    color: #ececec;
+    text-shadow:
+        0 0 8px rgba(255, 0, 0, 0.5),
+        0 0 20px rgba(255, 0, 0, 0.2);
+    margin: 0;
+}
+
+.loadingContainer h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #d4d4d4;
+    margin: 0;
+}
+
+.progressBar {
+    width: 430px;
+    height: 14px;
+    background: #181818;
+    border: 1px solid #5a0000;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: inset 0 0 8px rgba(255,255,255,0.05);
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(to right, #5a0000, #d10000);
+    transition: width .04s linear;
+}
+
+.loadingContainer p {
+    margin-top: 12px;
+    color: #9b9b9b;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .loadingContainer h1 {
+        font-size: 48px;
+        letter-spacing: 8px;
+    }
+
+    .progressBar {
+        width: 90%;
+    }
+
+    .loadingContainer h3 {
+        font-size: 16px;
+    }
+}
