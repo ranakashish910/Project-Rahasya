@@ -8,10 +8,11 @@ app.use(cors());
 app.use(express.json())
 connectDb();
 
-const {authRoutes,gameRoutes}=require('./routes')
+const {authRoutes,gameRoutes,adminRoutes}=require('./routes')
 app.use('/api/auth',authRoutes)
 app.use("/api/game",gameRoutes)
 
+app.use('/api/admin',adminRoutes)
 
 
 app.listen(3000,'0.0.0.0',()=>{

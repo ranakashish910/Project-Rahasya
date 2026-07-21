@@ -6,7 +6,7 @@ const initialState = {
     hasKey: false,
     puzzleSolved: false,
     currentChapter: 1,
-    timer: 300,
+    timer: 10,
     diaryRead: false,
     paintingInspected: false,
     showKey: false,
@@ -19,6 +19,7 @@ const initialState = {
     },
     warningShown: false,
     gameOver: false,
+    showGhost:false
 }
 
 const gameSlice = createSlice({
@@ -99,9 +100,12 @@ const gameSlice = createSlice({
             state.showKey = action.payload.showKey;
 
         },
+        setShowGhost:(state)=>{
+            state.showGhost=true
+        },
         resetGame: () => initialState
     }
 })
 
-export const { addItem, addClue, getKey, solvePuzzle, nextChapter, showPopup, hidePopup, startTimer, resetTimer, showWarning,setDiaryRead,setPaintingInspected,setShowKey, setGameOver, resetGame, loadGameState } = gameSlice.actions
+export const { addItem, addClue, getKey, solvePuzzle, nextChapter, showPopup, hidePopup, startTimer, resetTimer, showWarning,setDiaryRead,setPaintingInspected,setShowKey, setGameOver, resetGame, loadGameState ,showGhost,setShowGhost} = gameSlice.actions
 export default gameSlice.reducer;

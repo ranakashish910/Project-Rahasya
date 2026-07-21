@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b0b0b;
+    font-family:Poppins,sans-serif;
+}
+
+.admin-container{
+    display:flex;
+}
+
+.main-content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    min-height:100vh;
+}
+
+.page-content{
+    padding:30px;
+}

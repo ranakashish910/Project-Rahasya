@@ -14,13 +14,13 @@ export const Menu = () => {
             const data = await loadGame();
             dispatch(loadGameState(data));
             if (data.currentChapter === 1) {
-                navigate("/game/chapter1");
+                navigate("/chapter1");
             }
             else if (data.currentChapter === 2) {
-                navigate("/game/chapter2");
+                navigate("/chapter2");
             }
             else if (data.currentChapter === 3) {
-                navigate("/game/chapter3");
+                navigate("/chapter3");
             }
         } catch (error) {
             alert("No saved game found");
@@ -61,8 +61,7 @@ export const Menu = () => {
                     <CustomButton className="btn" text="Story" onClick={handleStory} />
                     <CustomButton className="btn" text="New Game" onClick={handleNewGame} />
                     <CustomButton className="btn" text="Chapters" />
-                    <CustomButton className="btn" text="Options" />
-                    <CustomButton className="btn" text="Credits" />
+                    <CustomButton className="btn" text="Feedback" />
                     <CustomButton className="btn" text="Exit Game" onClick={handleExit} />
                 </div>
             </div>

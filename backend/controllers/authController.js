@@ -35,14 +35,15 @@ const login=async(req,res)=>{
         if(!match){
             return res.status(401).json({message:"Invalid password"})
         }
-        const token=jwt.sign({id:existingUser._id,email:existingUser.email,username:existingUser.username},process.env.JWT_SECRET,{expiresIn:"7d"})
+        const token=jwt.sign({id:existingUser._id,email:existingUser.email,username:existingUser.username,role:existingUser.role},process.env.JWT_SECRET,{expiresIn:"7d"})
         console.log(process.env.JWT_SECRET);
         return res.status(200).json({message:"Successful",
             token,
             user:{
                 id:existingUser._id,
                 username:existingUser.username,
-                email:existingUser.email
+                email:existingUser.email,
+                role:existingUser.role
             }
         })
 

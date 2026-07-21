@@ -1,3 +1,5 @@
 const authRoutes=require('./authRoutes')
 const gameRoutes=require('./gameRoutes')
-module.exports={authRoutes,gameRoutes}
+const adminRoutes=require('./adminRoutes')
+
+module.exports={authRoutes,gameRoutes,adminRoutes}

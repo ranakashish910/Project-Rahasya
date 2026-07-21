@@ -25,13 +25,18 @@ const Login = () => {
                 .string()
                 .required("Password is required")
         }),
-        onSubmit: async(values) => {
-            try{
-                const response=await axios.post("http://localhost:3000/api/auth/login",values)
+        onSubmit: async (values) => {
+            try {
+                const response = await axios.post("http://localhost:3000/api/auth/login", values)
                 alert(response.data.message)
-                localStorage.setItem("token",response.data.token)
-                navigate('/story')
-            }catch(error){
+                localStorage.setItem("token", response.data.token)
+                localStorage.setItem("user", JSON.stringify(response.data.user));
+                if (response.data.user.role === "admin") {
+                    navigate("/admin/dashboard");
+                } else {
+                    navigate("/story");
+                }
+            } catch (error) {
                 alert(error.response.data.message)
             }
         }

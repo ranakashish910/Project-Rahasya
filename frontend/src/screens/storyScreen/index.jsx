@@ -40,7 +40,7 @@ export const StoryScreen = () => {
                             sequence={[
                                 `In the heart of an abandoned Haveli, there lies a secret that was never meant to be uncovered...Years ago, a powerful ritual was performed to keep an ancient evil bound. But when greed and betrayal took over, the ritual was left incomplete...Now, the spirit roams free, cursed to protect what was hidden.You are here for answers, but the Haveli has other plans.Find the key... Solve the puzzles.Avoid the spirit! Escape before midnight.`,
                             ]}
-                            speed={40}
+                            speed={30}
                             cursor={true}
                             wrapper="div"
                             style={{
